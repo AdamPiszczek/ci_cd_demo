@@ -1,9 +1,4 @@
-fastapi
-uvicorn[standard]
-sqlalchemy
-pydantic
-joblib
-scikit-learn
-pandas
-numpy
-requests
+fastapi=0.122.0
+pydantic==2.12.5
+sqlalchemy==2.0.44
+uvicorn[standard]==0.38.0

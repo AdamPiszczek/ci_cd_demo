@@ -1,11 +1,13 @@
-from fastapi import FastAPI, Depends
-from db.models import PricePrediction
 import asyncio
-from utils import predict_price
+from functools import lru_cache
+
+from fastapi import Depends, FastAPI
 from sqlalchemy.orm import Session
+
 from db import models
 from db.database import SessionLocal, engine
-from functools import lru_cache
+from db.models import PricePrediction
+from utils import predict_price
 
 models.Base.metadata.create_all(bind=engine)
 
